@@ -1,0 +1,2 @@
+k3sup install --ip <master node ip> --user <username>
+k3sup join --server-ip <master node ip> --ip <worker node ip> --user <username>

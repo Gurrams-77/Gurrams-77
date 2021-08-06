@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-deployment
+  labels:
+    app: microservice
+spec:
+  # Define the Number of Pods
+  replicas: 4
+  # Define the Selector
+  selector:
+    matchLabels:
+      app: microservice
+  template:
+    metadata:
+      labels:
+        app: microservice
+    spec:
+      containers: # Container Details
+      - name: microservice
+        image: microservice # Image
+        ports:
+        - containerPort: 8181
